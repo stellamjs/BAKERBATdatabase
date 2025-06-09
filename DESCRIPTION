@@ -1,0 +1,18 @@
+Package: BAKERBATdatabase
+Title: Facilitates access to the bakerbat_database tables
+Version: 0.1.0
+Authors@R: 
+    person(given = "Stella",
+           family = "Januario",
+           role = c("aut", "cre"),
+           email = "stella.mjs@gmail.com",
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+Description: This package facilitates the accessing and maintenance of bakerbat_database tables. 
+Imports: dplyr, tidyr, purrr, RMySQL, rmarkdown, utils
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
