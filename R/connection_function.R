@@ -4,7 +4,7 @@
 #' Make sure there is not superfluous white space in this text file.
 #' @param username.password.file.path The path of the text file containing the username and password to the database account
 #' @param suppress.bat Set to TRUE 
-#'
+#' @importFrom utils read.delim
 #' @return The database connection object 
 #' @export
 #'

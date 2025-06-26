@@ -8,7 +8,7 @@ Authors@R:
            email = "stella.mjs@gmail.com",
            comment = c(ORCID = "YOUR-ORCID-ID"))
 Description: This package facilitates the accessing and maintenance of bakerbat_database tables. 
-Imports: dplyr, tidyr, purrr, RMySQL, rmarkdown, utils
+Imports: RMySQL
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
