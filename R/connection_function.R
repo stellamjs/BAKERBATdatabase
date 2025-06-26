@@ -31,3 +31,19 @@ bakerbat_database_connect <- function(username.password.file.path, suppress.bat 
 }
 
 
+#' Disconnect from the bakerbat_database
+#'
+#' @param database.connection.object The database connection object created with the bakerbat_database_connect() function
+#'
+#' @return message indicating disconnecting from bakerbat_database
+#' @export
+#'
+#'
+bakerbat_database_disconnect <- function(database.connection.object) {
+  test <- RMySQL::dbDisconnect(database.connection.object)
+  if (test) {
+    print("You are now disconnected from the bakerbat_database.")
+  }
+}
+
+
