@@ -6,12 +6,10 @@
 and password saved as a .txt file with username as the first line and password as the second line.
 Make sure there is not superfluous white space in this text file.}
 \usage{
-bakerbat_database_connect(username.password.file.path, suppress.bat = T)
+bakerbat_database_connect(username.password.file.path)
 }
 \arguments{
 \item{username.password.file.path}{The path of the text file containing the username and password to the database account}
-
-\item{suppress.bat}{Set to TRUE}
 }
 \value{
 The database connection object
