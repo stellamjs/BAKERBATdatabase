@@ -2,4 +2,5 @@
 
 export(bakerbat_database_connect)
 export(bakerbat_database_disconnect)
+export(list_bakerbat_database_tables)
 importFrom(utils,read.delim)
