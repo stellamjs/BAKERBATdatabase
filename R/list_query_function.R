@@ -41,3 +41,33 @@ tryCatch({
     return(NULL)
   })
 }
+
+
+#' Technitians
+#'
+#' This function queries census_technitians + technitians + census_roles tables to create the final Technitians table
+#' @param database.connection.object The database connection object created with the bakerbat_database_connect() function
+#' @keywords database tables
+#' @return A vector of all tables in the bakerbat_database.
+#' @export
+
+Technitians <- function(database.connection.object) {
+  query <- "
+    SELECT 
+        ct.census_id, 
+        t.full_name, 
+        t.initials, 
+        GROUP_CONCAT(DISTINCT r.role_description SEPARATOR ', ') AS roles
+    FROM census_technitians AS ct
+    LEFT JOIN technitians AS t ON t.tech_id = ct.tech_id
+    LEFT JOIN census_roles AS r ON r.role_id = ct.role_id
+    GROUP BY ct.census_id, t.full_name, t.initials;
+  "
+  tryCatch({
+    df_roles <- DBI::dbGetQuery(database.connection.object, query)
+    return(df_roles)
+  }, error = function(e) {
+    message("Error en la consulta de roles: ", e$message)
+    return(NULL)
+  })
+}
