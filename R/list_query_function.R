@@ -71,3 +71,57 @@ Technitians <- function(database.connection.object) {
     return(NULL)
   })
 }
+
+#' Bat Data function
+#' This function queries general data of bats from the Bakerbat project
+#' @param database.connection.object The database connection object created with the new_preempt_database_connect() function
+#'
+#' @return a dataframe
+#' @export
+#'
+#'
+Bat_Data <- function(database.connection.object) {
+  rs <-  RMySQL::dbSendQuery(database.connection.object, "select * from bat_data")
+  RMySQL::fetch(rs, n = -1)
+}
+
+#' Tattoo Information function
+#' This function queries details of the tattooing activities during the Bakerbat project
+#' @param database.connection.object The database connection object created with the new_preempt_database_connect() function
+#'
+#' @return a dataframe
+#' @export
+#'
+#'
+Tattoo_Information <- function(database.connection.object) {
+  rs <-  RMySQL::dbSendQuery(database.connection.object, "select * from tattoo_information")
+  RMySQL::fetch(rs, n = -1)
+}
+
+
+#' Sample Extracted function
+#' This function queries details on the type of samples extracted during the Bakerbat project
+#' @param database.connection.object The database connection object created with the new_preempt_database_connect() function
+#'
+#' @return a dataframe
+#' @export
+#'
+#'
+Sample_Extracted <- function(database.connection.object) {
+  rs <-  RMySQL::dbSendQuery(database.connection.object, "select * from sample_extracted")
+  RMySQL::fetch(rs, n = -1)
+}
+
+
+#' RIP function
+#' This function queries the id and date when the bats passed
+#' @param database.connection.object The database connection object created with the new_preempt_database_connect() function
+#'
+#' @return a dataframe
+#' @export
+#'
+#'
+RIP <- function(database.connection.object) {
+  rs <-  RMySQL::dbSendQuery(database.connection.object, "select * from RIP")
+  RMySQL::fetch(rs, n = -1)
+}
