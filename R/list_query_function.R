@@ -80,8 +80,8 @@ Technitians <- function(database.connection.object) {
 #' @export
 #'
 #'
-Bat_Data <- function(database.connection.object) {
-  rs <-  RMySQL::dbSendQuery(database.connection.object, "select * from bat_data")
+Census_Bat_Data <- function(database.connection.object) {
+  rs <-  RMySQL::dbSendQuery(database.connection.object, "select * from census_bat_data")
   RMySQL::fetch(rs, n = -1)
 }
 
@@ -93,8 +93,8 @@ Bat_Data <- function(database.connection.object) {
 #' @export
 #'
 #'
-Tattoo_Information <- function(database.connection.object) {
-  rs <-  RMySQL::dbSendQuery(database.connection.object, "select * from tattoo_information")
+Census_Tattoo_Information <- function(database.connection.object) {
+  rs <-  RMySQL::dbSendQuery(database.connection.object, "select * from census_tattoo_information")
   RMySQL::fetch(rs, n = -1)
 }
 
@@ -107,8 +107,8 @@ Tattoo_Information <- function(database.connection.object) {
 #' @export
 #'
 #'
-Sample_Extracted <- function(database.connection.object) {
-  rs <-  RMySQL::dbSendQuery(database.connection.object, "select * from sample_extracted")
+Census_Sample_Extracted <- function(database.connection.object) {
+  rs <-  RMySQL::dbSendQuery(database.connection.object, "select * from census_sample_extracted")
   RMySQL::fetch(rs, n = -1)
 }
 
