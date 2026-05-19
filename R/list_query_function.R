@@ -45,13 +45,13 @@ tryCatch({
 
 #' technitians
 #'
-#' This function queries census_technitians + technitians + activity_roles tables to create the final Technitians table
+#' This function queries census_technitians + technitians + activity_roles tables to create the final census_technitians table
 #' @param database.connection.object The database connection object created with the bakerbat_database_connect() function
 #' @keywords database tables
 #' @return A vector of all tables in the bakerbat_database.
 #' @export
 
-technitians <- function(database.connection.object) {
+census_technitians <- function(database.connection.object) {
   query <- "
     SELECT 
         ct.census_id, 
